@@ -1,0 +1,30 @@
+<div class="container body">
+    <div class="main_container my-3">
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <!-- top tiles -->
+        <div class="row mb-4">
+          <div class="col-12 col-md-12 d-block">
+              <div class="d-flex justify-content-center">
+              <div class="col-sm d-inline div-section d-flex align-item-center align-content-center"><button class="btn-new px-2 py-1" [routerLink]="['prodedimientos']"><b>Procedimientos</b></button></div>
+              <div class="col-sm d-inline div-section d-flex align-item-center align-content-center"><button class="btn-new px-2 py-1" [routerLink]="['responsabilidades']"><b>Responsabilidades</b></button></div>
+              <div class="col-sm d-inline div-section d-flex align-item-center align-content-center"><button class="btn-new px-2 py-1" [routerLink]="['derechos']"><b>Derechos</b></button></div>
+              <div class="col-sm d-inline div-section d-flex align-item-center align-content-center"><button class="btn-new px-2 py-1" [routerLink]="['requisitos']"><b>Requisitos</b></button></div>
+              <div class="col-sm d-inline div-section d-flex align-item-center align-content-center"><button class="btn-new px-2 py-1" [routerLink]="['otros']"><b>Otros</b></button></div>
+              </div>
+          </div>
+      </div>
+        <div class="row" style="display: inline-block;" >
+            <div class="col-md-12">
+            <div>
+                <router-outlet> </router-outlet>
+            </div>
+
+          </div>
+        
+        </div>
+          
+      </div>
+    </div>
+  </div>
+  

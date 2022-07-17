@@ -1,0 +1,13 @@
+.btn-new{
+    border: 1px solid rgb(177, 181, 187, .3);
+    padding: 0.4%;
+}
+.btn-new:hover{
+    background-color: #204C79;
+    color: aliceblue;
+    border-bottom: 1px #204C79;
+}
+.div-section{
+   align-items: center;
+   justify-content: center; 
+}

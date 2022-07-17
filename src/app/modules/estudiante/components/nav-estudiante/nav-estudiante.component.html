@@ -1,0 +1,103 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport  id="nav-modificacion"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === false">
+      <div class="mat-center">
+        <a mat-list-item [routerLink]="['/informacion']"><img id="logoupeu" src="../../../../../assets/img/upeui.png" alt="logo-UPeU"></a>
+        <!-- <img class="avatar avatarmat-elevation-z8" src="" /> -->
+      </div>
+      <!-- 
+      <mat-card-subtitle class="mat-center"><strong>Cheemsi Dev</strong></mat-card-subtitle>
+      <mat-card-subtitle class="mat-center">Software Engineer</mat-card-subtitle>
+      <mat-toolbar>
+        <div class="mat-button-row">
+          <div class="mat-flex-container">
+            <button mat-icon-button color="warn" aria-label="key">
+              <mat-icon>key</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" aria-label="note">
+              <mat-icon>note</mat-icon>
+            </button>
+            <button mat-icon-button color="accent" aria-label="event">
+              <mat-icon>event</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-toolbar> -->
+      <div class="div-vacio">
+  
+      </div>
+      <mat-divider></mat-divider>
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['informacion']">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" mat-list-icon>web</mat-icon>
+          <span mat-line>Informacion</span>
+        </a>
+        <a mat-list-item [routerLink]="['convenios']">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" mat-list-icon><i class="fa-solid fa-file-contract"></i></mat-icon>
+          <span mat-line>Convenios</span>
+        </a>
+        <a mat-list-item [routerLink]="['solicitudlist']">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" mat-list-icon>article</mat-icon>
+          <span mat-line>Mis solicitudes</span>
+        </a>
+        <a mat-list-item [routerLink]="['solicitudadd']">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" mat-list-icon>article</mat-icon>
+            <span mat-line>Enviar Solicitud</span>
+          </a>
+        <a mat-list-item [routerLink]="['/practicas']">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" mat-list-icon>dns</mat-icon>
+          <span mat-line>Practicas</span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar class="color-mat-toolbar">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span></span>
+        <span class="example-spacer"></span>
+        <!-- <button mat-icon-button class="favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button> -->
+        <div class="perfilus"><img class="perfilus" src="../../assets/img/usv.png"/></div>
+        <div class="datosuser">
+          <p class="nombreuser"></p>
+          <p class="cargouser"></p>
+        </div>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>Perfil</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Notificaciones</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>settings</mat-icon>
+              <span>Configuración</span>
+            </button>
+          </mat-menu>
+              </mat-toolbar>
+              <!-- Add Content Here -->
+              <div class="viewer">
+                <router-outlet></router-outlet>
+                <mat-sidenav #panel class="panel" position="end">
+                  <ng-container #content></ng-container>
+                </mat-sidenav>
+              </div>
+  
+            </mat-sidenav-content>
+          </mat-sidenav-container>
+  

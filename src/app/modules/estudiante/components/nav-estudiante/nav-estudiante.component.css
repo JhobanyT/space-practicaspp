@@ -1,0 +1,107 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 240px;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .avatar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  /* .sidenav::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #faa !important;
+  }
+  
+  
+  .sidenav::-webkit-scrollbar-thumb {
+      background: #f00; 
+  } */
+  
+  
+  .mat-center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .mat-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+  
+  .mat-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .mat-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .mat-sidenav-content::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #faa;
+  }
+  
+  .mat-sidenav-content::-webkit-scrollbar-thumb {
+      background: #f00; 
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .viewer {
+    width: calc(100% - 72px);
+    height: calc(100% - 80px);
+    margin-top: 9px;
+    margin-left: 36px;
+  }
+  
+  
+  /* nuevo css */
+  #logoupeu {
+    max-height: 53px;
+    min-height: 41px;
+  }
+  .div-vacio{
+    margin-top: 40px;
+  }
+  .perfilus{
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    border: #fff ;
+  }
+  .datosuser{
+    min-width: 1%;
+  }
+  .color-mat-toolbar {
+    background-color: #204C79;
+    color: azure;
+  }
+  #nueva-config{
+    position: fixed;
+  }
+  #nav-modificacion{
+    overflow:hidden;
+  }
