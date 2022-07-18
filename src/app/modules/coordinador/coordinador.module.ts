@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SecretariaRoutingModule } from './secretaria-routing.module';
-import { NavSecretariaComponent } from './components/nav-secretaria/nav-secretaria.component';
-import { SolicitudComponent } from './components/solicitud/solicitud.component';
+import { CoordinadorRoutingModule } from './coordinador-routing.module';
+import { NavCoordinadorComponent } from './components/nav-coordinador/nav-coordinador.component';
+import { ConvenioComponent } from './components/convenio/convenio.component';
+
 import { SharedModule } from '@shared/shared.module';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -20,12 +21,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    NavSecretariaComponent,
-    SolicitudComponent
+    NavCoordinadorComponent,
+    ConvenioComponent
   ],
   imports: [
     CommonModule,
-    SecretariaRoutingModule,
+    CoordinadorRoutingModule,
     SharedModule,
     MatSliderModule,
     MatSidenavModule,
@@ -40,4 +41,4 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
   ]
 })
-export class SecretariaModule { }
+export class CoordinadorModule { }

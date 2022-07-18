@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SolicitudComponent } from './components/solicitud/solicitud.component';
-import { NavSecretariaComponent } from './components/nav-secretaria/nav-secretaria.component';
+import { NavCoordinadorComponent } from './components/nav-coordinador/nav-coordinador.component';
+import { ConvenioComponent } from './components/convenio/convenio.component';
 
 const routes: Routes = [
-  { path: '', component: NavSecretariaComponent, 
+  { path: '', component: NavCoordinadorComponent, 
   children:[
     {
-      path: '', component: SolicitudComponent,
+      path: '', component: ConvenioComponent,
       // children:[
       //   {
       //     path: '', component: InformacionProcedimientosComponent
@@ -17,8 +17,8 @@ const routes: Routes = [
       //   }
       // ]
       
-    },
-    { path: 'solicitud', component: NavSecretariaComponent}
+    }
+    // { path: 'solicitud', component: NavSecretariaComponent}
   ]
   }
 ];
@@ -27,4 +27,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class SecretariaRoutingModule { }
+export class CoordinadorRoutingModule { }

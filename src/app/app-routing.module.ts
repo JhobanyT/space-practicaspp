@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SigninComponent } from './components/signin/signin.component';
 import { AuthGuard } from './auth.guard';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SecretariaModule } from './modules/secretaria/secretaria.module';
 
 const routes: Routes = [
   {
@@ -27,6 +28,16 @@ const routes: Routes = [
   {
     path:'estudiante',
     loadChildren: () => import('@modules/estudiante/estudiante.module').then((m) => m.EstudianteModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path:'secretaria',
+    loadChildren: () => import('@modules/secretaria/secretaria.module').then((m) => m.SecretariaModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path:'coordinador',
+    loadChildren: () => import('@modules/coordinador/coordinador.module').then((m) => m.CoordinadorModule),
     canActivate: [AuthGuard]
   },
   

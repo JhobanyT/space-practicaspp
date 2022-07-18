@@ -27,6 +27,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { ConvenioComponent } from './components/convenio/convenio.component';
 import { SolicitudAddComponent } from './components/solicitud-add/solicitud-add.component';
 import { SolicitudComponent } from './components/solicitud/solicitud.component';
+import { PracticaComponent } from './components/practica/practica.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { SolicitudComponent } from './components/solicitud/solicitud.component';
     ConvenioComponent,
     SolicitudAddComponent,
     SolicitudComponent,
+    PracticaComponent,
   ],
   imports: [
     CommonModule,
