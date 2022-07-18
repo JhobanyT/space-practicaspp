@@ -23,7 +23,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSliderModule } from '@angular/material/slider';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { ConvenioComponent } from './components/convenio/convenio.component';
 import { SolicitudAddComponent } from './components/solicitud-add/solicitud-add.component';
 import { SolicitudComponent } from './components/solicitud/solicitud.component';
@@ -40,7 +40,7 @@ import { SolicitudComponent } from './components/solicitud/solicitud.component';
     NavEstudianteComponent,
     ConvenioComponent,
     SolicitudAddComponent,
-    SolicitudComponent
+    SolicitudComponent,
   ],
   imports: [
     CommonModule,
@@ -56,7 +56,7 @@ import { SolicitudComponent } from './components/solicitud/solicitud.component';
     MatCardModule,
     MatMenuModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
   ]
 })
 export class EstudianteModule { }

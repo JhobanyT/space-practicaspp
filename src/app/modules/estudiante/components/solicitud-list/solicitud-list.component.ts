@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SolicitudService } from 'src/app/services/solicitud.service';
+import { Solicitud } from '../../../../core/models/solicitud';
 
 @Component({
   selector: 'app-solicitud-list',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SolicitudListComponent implements OnInit {
 
-  constructor() { }
+  solicitudes = [];
 
-  ngOnInit(): void {
+  constructor(private solicitudService: SolicitudService) { }
+
+  ngOnInit() {
+    this.solicitudService.getSolicitud()
+      .subscribe(
+        res => {
+          this.solicitudes = res;
+          console.log(res);
+        },
+        err => console.log(err)
+      )
   }
 
 }

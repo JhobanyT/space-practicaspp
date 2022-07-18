@@ -11,6 +11,7 @@ import { ConvenioComponent } from './components/convenio/convenio.component';
 import { SolicitudListComponent } from './components/solicitud-list/solicitud-list.component';
 import { SolicitudAddComponent } from './components/solicitud-add/solicitud-add.component';
 import { SolicitudComponent } from './components/solicitud/solicitud.component';
+import { AuthGuard } from '../../auth.guard';
 
 const routes: Routes = [
   {
