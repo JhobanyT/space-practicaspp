@@ -21,6 +21,7 @@ const routes: Routes = [
     // { path: 'solicitud', component: NavSecretariaComponent}
   ]
   }
+
 ];
 
 @NgModule({
