@@ -3,6 +3,8 @@ export interface Persona {
     nombre:string;
     ape_paterno:string;
     ape_materno:string;
-    direccion:string;
     sexo:string;
+    f_nacimiento: any;
+    direccion:string;
+    telefono: string
 }
