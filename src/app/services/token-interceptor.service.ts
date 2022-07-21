@@ -12,7 +12,7 @@ export class TokenInterceptorService implements HttpInterceptor {
   intercept(req:any, next: any) {
     let tokenizeReq = req.clone({
       setHeaders: {
-        Authorization: `space-practicas ${this.authService.getToken()}`
+        Authorization: `token-space ${this.authService.getToken()}`
       }
     });
     console.log(tokenizeReq)

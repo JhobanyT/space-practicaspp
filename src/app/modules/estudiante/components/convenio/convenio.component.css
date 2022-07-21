@@ -1,0 +1,47 @@
+.introduccion-convenios{
+    font-size: 17px;
+    font-family: 'Oswald', sans-serif;
+}
+.introduccion-convenios1{
+    font-size: 15px;
+    font-family: 'Teko', sans-serif;
+    color: rgb(43, 43, 43);
+}
+.imagen-con {
+    max-width: 100%;
+    max-height: 100%;
+}
+.icon-corazon{
+    color: aqua;
+}
+.valores2{
+    background-color: #169b90;
+    color: rgb(255, 255, 255);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    padding: 3%
+}
+.valores1{
+    background-color: #169b90;
+    color: rgb(255, 255, 255);
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 3%
+}
+
+.periodo{
+    border-radius: 12%;
+    font-size: 14px;
+    background-color: aquamarine;
+}
+.cupos{
+    border-radius: 12%;
+    font-size: 20px;
+    height: 40px;
+    background-color: rgb(71, 199, 156);
+    align-items: center;
+}
+.empresas-post{
+    margin-top: 14%;
+}

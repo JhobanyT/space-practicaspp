@@ -1,0 +1,13 @@
+.btn-success1{
+    background-color: rgb(5, 133, 84);
+}
+.btn-warning1{
+    background-color: rgb(0, 165, 157);
+}
+.btn-danger1{
+    background-color: rgb(197, 5, 47);
+}
+.btn-option{
+    min-width: 100px;
+    color: azure;
+}

@@ -1,8 +1,15 @@
 import { HttpClient } from '@angular/common/http';
+<<<<<<< HEAD
 // import { Solicitud } from '../models/solicitud';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { Solicitud } from '../core/models/solicitud';
+=======
+import { Solicitud } from '../models/solicitud';
+import { Injectable } from '@angular/core';
+import { map, Observable } from 'rxjs';
+// import { Solicitud } from '../core/models/solicitud';
+>>>>>>> fea5c4bf944a6e567c7f23900df162c42ddd7832
 
 
 
@@ -15,6 +22,7 @@ export class SolicitudService {
   solicitudURL = 'http://localhost:4000/api/solicitud'
 
   constructor(private http:HttpClient) { }
+<<<<<<< HEAD
 
    getSolicitud():  Observable<any> {
      return this.http.get(this.solicitudURL);
@@ -56,6 +64,54 @@ export class SolicitudService {
   findByTitle(title: any): Observable<Solicitud[]> {
     return this.http.get<Solicitud[]>(`${this.solicitudURL}?title=${title}`);
   }
+=======
+
+   getSolicitud():  Observable<any> {
+     return this.http.get(this.solicitudURL);
+   }
+
+  // getSolicitud(id:string): Observable<Solicitud> {
+  //   let url = this.solicitudURL + '/solicitud/' + id;
+  //   return this.http.get<Solicitud>(url);
+  // }
+
+  getSolicitudById(_id:any): Observable<any> {
+    return this.http.get(`${this.solicitudURL}/${_id}`);
+  }
+  createSolicitud(data: any): Observable<any> {
+    return this.http.post(this.solicitudURL, data);
+  }
+  updateSolicitudById(id: any, data: any): Observable<any> {
+    return this.http.put(`${this.solicitudURL}/${id}`, data);
+  }
+  deleteSolicitudById(_id: any){
+    return this.http.delete(`${this.solicitudURL}/${_id}`);
+  }
+  
+  // deleteSolicitudById(_id:string){
+  //   return this.http.delete(this.solicitudURL+'/'+_id);
+  // }
+
+
+
+  recuperarEstudiante(id: any, data: any): Observable<any> {
+    return this.http.put(`${this.solicitudURL}/${id}`, data);
+  }
+  // recuperarSolicitud(id: any, data: any): Observable<any> {
+  //   return this.http.put(`${this.solicitudURL}/${id}`, data);
+  // }
+
+
+  // delete(id: any): Observable<any> {
+  //   return this.http.delete(`${this.solicitudURL}/${id}`);
+  // }
+  // deleteAll(): Observable<any> {
+  //   return this.http.delete(this.solicitudURL);
+  // }
+  // findByTitle(title: any): Observable<Solicitud[]> {
+  //   return this.http.get<Solicitud[]>(`${this.solicitudURL}?title=${title}`);
+  // }
+>>>>>>> fea5c4bf944a6e567c7f23900df162c42ddd7832
 
 }
 

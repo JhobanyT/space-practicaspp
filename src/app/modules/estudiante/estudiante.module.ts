@@ -28,6 +28,7 @@ import { ConvenioComponent } from './components/convenio/convenio.component';
 import { DialogEmpresaOver, SolicitudAddComponent } from './components/solicitud-add/solicitud-add.component';
 import { SolicitudComponent } from './components/solicitud/solicitud.component';
 import { PracticaComponent } from './components/practica/practica.component';
+<<<<<<< HEAD
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -38,6 +39,9 @@ import { SolicitudService } from 'src/app/services/solicitud.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatGridListModule} from '@angular/material/grid-list';
+=======
+import { InformeComponent } from './components/informe/informe.component';
+>>>>>>> fea5c4bf944a6e567c7f23900df162c42ddd7832
 
 @NgModule({
   declarations: [
@@ -53,8 +57,12 @@ import {MatGridListModule} from '@angular/material/grid-list';
     SolicitudAddComponent,
     SolicitudComponent,
     PracticaComponent,
+<<<<<<< HEAD
     DialogEmpresaOver,
     DialogSolicitud,
+=======
+    InformeComponent,
+>>>>>>> fea5c4bf944a6e567c7f23900df162c42ddd7832
   ],
   imports: [
     CommonModule,

@@ -1,14 +1,19 @@
+<<<<<<< HEAD
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Empresa } from '@core/models/empresa';
 import { map, Observable } from 'rxjs';
 import { Solicitud } from '../core/models/solicitud';
+=======
+import { Injectable } from '@angular/core';
+>>>>>>> fea5c4bf944a6e567c7f23900df162c42ddd7832
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmpresaService {
 
+<<<<<<< HEAD
   empresaURL = 'http://localhost:4000/api/empresa'
 
   constructor(private http:HttpClient) { }
@@ -40,4 +45,7 @@ export class EmpresaService {
   findByTitle(title: any): Observable<Empresa[]> {
     return this.http.get<Empresa[]>(`${this.empresaURL}?title=${title}`);
   }
+=======
+  constructor() { }
+>>>>>>> fea5c4bf944a6e567c7f23900df162c42ddd7832
 }
