@@ -1,0 +1,54 @@
+<form [formGroup]="empresaForm" (ngSubmit)="saveForm(empresaForm)">
+    <h1 mat-dialog-title>Add file</h1>
+    <mat-dialog-content>
+        <mat-form-field class="mat-full" appearance="standard">
+            <mat-label>Razon Social</mat-label>
+            <input matInput formControlName="nombre" placeholder="Nombre de la empresa" required>
+        </mat-form-field>
+        <mat-form-field class="mat-full" appearance="standard">
+            <mat-label>R.U.C.</mat-label>
+            <input matInput formControlName="ruc" placeholder="Nombre de la empresa" required>
+        </mat-form-field>
+        <mat-form-field class="mat-full" appearance="standard">
+            <mat-label>Direccion</mat-label>
+            <input matInput formControlName="direccion" placeholder="Nombre de la empresa" required>
+        </mat-form-field>
+        <mat-form-field class="mat-full" appearance="standard">
+            <mat-label>Telefono</mat-label>
+            <input matInput formControlName="telefono" placeholder="Nombre de la empresa" required>
+        </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button type="button" (click)="onNoClick()">No Thanks</button>
+        <!-- <button mat-button type="submit">Add</button> -->
+        <button mat-button cdkFocusInitial>Ok</button>
+    </mat-dialog-actions>
+</form>
+
+
+<!-- <h1 mat-dialog-title>Crear Nueva Empresa</h1>
+<div mat-dialog-content>
+    
+    <form>
+        <mat-form-field class="mat-full" appearance="standard">
+            <mat-label>Razon Social</mat-label>
+            <input matInput [(ngModel)]="data.nombre" placeholder="Nombre de la empresa" required>
+        </mat-form-field>
+        <mat-form-field class="mat-full" appearance="standard">
+            <mat-label>Direccion</mat-label>
+            <input matInput [(ngModel)]="data.ruc" placeholder="Last name, First name" required>
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <mat-label>R.U.C.</mat-label>
+            <input matInput [(ngModel)]="data.direccion" placeholder="" required>
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <mat-label>Telefono</mat-label>
+            <input matInput [(ngModel)]="data.telefono" placeholder="Last name, First name" required>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div> -->

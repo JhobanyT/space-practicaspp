@@ -15,6 +15,7 @@ export class TokenInterceptorService implements HttpInterceptor {
         Authorization: `space-practicas ${this.authService.getToken()}`
       }
     });
+    console.log(tokenizeReq)
     return next.handle(tokenizeReq);
   }
 

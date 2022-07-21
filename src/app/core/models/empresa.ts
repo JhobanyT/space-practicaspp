@@ -1,6 +1,7 @@
 export interface Empresa {
-    _id:string | number;
-    nombre:string;
-    ruc:string;
-    razon_social:string;
+    _id?:string | number;
+    nombre?:string;
+    ruc?:string;
+    direccion?:string;
+    telefono?:string;
 }

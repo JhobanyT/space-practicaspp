@@ -1,2 +1,35 @@
-<p>Add Solicitud</p>
-<button class="btn btn-dark" [routerLink]="['list']">Enviar Solicitud</button>
+<mat-card>
+    <mat-card-title>Nueva Solicitud</mat-card-title>
+    <mat-card-actions align="end">
+        <!-- <button mat-button>Like</button> -->
+    </mat-card-actions>
+    <mat-card-content>
+        <div class="mat-container mat-center">
+            <!-- <mat-form-field appearance="standard">
+                <mat-label>Nombre del Estudiante</mat-label>
+                <input matInput value="Cheemsi Dev">
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field> -->
+            <mat-form-field appearance="standard">
+                <mat-label>Estudiante</mat-label>
+                <mat-select [(ngModel)]="solicitud.estudiante">
+                  <mat-option value="62d78ef10c52cc88f186f8d3">Eli Calla Coaquira</mat-option>
+                  <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="standard">
+                <mat-label>Empresa</mat-label>
+                <mat-select [(ngModel)]="solicitud.empresa">
+                  <mat-option value="62d5bdf76e7cd65196ab64eb">Clinica Americana</mat-option>
+                  <mat-option value="62d78bb90c52cc88f186f8aa">MapleNetSoft</mat-option>
+                  <mat-option value="62d89029f3de40c9966ee3ad">Miromina</mat-option>
+                  <mat-option value="62d8909cf3de40c9966ee3b4">Tupemesa</mat-option>
+                  <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+                </mat-select>
+            </mat-form-field>
+            </div>
+        <button mat-raised-button color="primary" (click)="saveSolicitud()">Guardar</button>
+        <button mat-raised-button color="primary" (click)="dialogEmpresa()">Empresa</button>
+    </mat-card-content>
+</mat-card>
+

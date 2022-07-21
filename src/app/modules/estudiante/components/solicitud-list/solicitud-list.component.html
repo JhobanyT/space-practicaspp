@@ -1,14 +1,49 @@
-<table class="table table-striped table-hover">
-    <thead>
-    <tr>
-    <th scope="col" class="text-center border">Alumno</th>
-    <th scope="col" class="text-center border">Codigo de alumno</th>
-    <th scope="col" class="text-center border">Ciclo</th>
-    <th scope="col" class="text-center border">Empresa</th>
-    <th scope="col" class="text-center border">Estado</th>
-    <th scope="col" class="text-center border">Carta de presenetación</th>
-    </tr>
-    </thead>
-    <tbody>
-    </tbody>
+
+<mat-card>
+    <mat-card-title>Mis Solicitudes</mat-card-title>
+    <mat-card-actions align="end">
+        <!-- <button mat-button>Like</button> -->
+    </mat-card-actions>
+    <mat-card-content>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="estudiante.codigo">
+          <th mat-header-cell *matHeaderCellDef> Codigo </th>
+          <td mat-cell *matCellDef="let element"> {{element.estudiante[0].codigo}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="empresa">
+          <th mat-header-cell *matHeaderCellDef> Empresa </th>
+          <td mat-cell *matCellDef="let element"> {{element.empresa[0].nombre }} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="estado_solicitud">
+          <th mat-header-cell *matHeaderCellDef> Estado </th>
+          <td mat-cell *matCellDef="let element"> 
+
+            <mat-icon *ngIf="element?.estado_solicitud === 'Aceptado'" style="color:green;">check_circle</mat-icon>
+            <mat-icon *ngIf="element?.estado_solicitud === 'Rechazado'" style="color: red;">report_off</mat-icon> 
+            <mat-icon *ngIf="element?.estado_solicitud === 'Pendiente'" style="color: grey;">schedule</mat-icon>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="estado">
+            <th mat-header-cell *matHeaderCellDef> Opciones </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-icon-button color="primary" aria-label="icon">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="" aria-label="icon" (click)="editSolicitud(element._id)">
+                    <mat-icon>grading</mat-icon>
+                </button>
+                <button mat-icon-button color="warn" aria-label="icon">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+    </mat-card-content>
+</mat-card>
+

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { EstudianteRoutingModule } from './estudiante-routing.module';
-import { SolicitudListComponent } from './components/solicitud-list/solicitud-list.component';
+import { DialogSolicitud, SolicitudListComponent } from './components/solicitud-list/solicitud-list.component';
 import { SharedModule } from '@shared/shared.module';
 import { InformacionHomeComponent } from './components/informacion-home/informacion-home.component';
 import { InformacionProcedimientosComponent } from './components/informacion-procedimientos/informacion-procedimientos.component';
@@ -21,13 +21,23 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { ConvenioComponent } from './components/convenio/convenio.component';
-import { SolicitudAddComponent } from './components/solicitud-add/solicitud-add.component';
+import { DialogEmpresaOver, SolicitudAddComponent } from './components/solicitud-add/solicitud-add.component';
 import { SolicitudComponent } from './components/solicitud/solicitud.component';
 import { PracticaComponent } from './components/practica/practica.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { AuthGuard } from 'src/app/auth.guard';
+import { TokenInterceptorService } from 'src/app/services/token-interceptor.service';
+import { SolicitudService } from 'src/app/services/solicitud.service';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -43,6 +53,8 @@ import { PracticaComponent } from './components/practica/practica.component';
     SolicitudAddComponent,
     SolicitudComponent,
     PracticaComponent,
+    DialogEmpresaOver,
+    DialogSolicitud,
   ],
   imports: [
     CommonModule,
@@ -59,6 +71,16 @@ import { PracticaComponent } from './components/practica/practica.component';
     MatMenuModule,
     MatTableModule,
     HttpClientModule,
-  ]
+    MatSelectModule,
+    MatOptionModule,
+    FormsModule,
+    MatInputModule,
+    MatGridListModule,
+    MatButtonModule,
+    FormsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+  ],
 })
 export class EstudianteModule { }

@@ -44,6 +44,11 @@ const routes: Routes = [
         ],
       },
       {
+        path:'estudiante',
+        loadChildren: () => import('@modules/estudiante/estudiante.module').then((m) => m.EstudianteModule),
+        canActivate: [AuthGuard]
+      },
+      {
         path: 'convenios', component: ConvenioComponent
       },
       // {

@@ -1,0 +1,53 @@
+<!-- <p>{{ person.nombre }}</p>
+{{ currentSolicitud._id }} -->
+<!-- <p>{{currentSolicitud.estudiante[0] | json }}</p> -->
+
+
+<h1 mat-dialog-title>Solicitud</h1>
+<div mat-dialog-content>
+    <!-- <mat-grid-list cols="3" rowHeight="30px">
+        <mat-grid-tile>Codigo Estudiante</mat-grid-tile>
+        <mat-grid-tile>{{ currentSolicitud.estudiante[0] | json }}</mat-grid-tile>
+    </mat-grid-list> -->
+    <mat-grid-list cols="3" rowHeight="30px">
+        <mat-grid-tile>Nombre Estudiante</mat-grid-tile>
+        <mat-grid-tile>{{ person.nombre }} {{ person.ape_paterno }} {{ person.ape_materno }}</mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="3" rowHeight="30px">
+        <mat-grid-tile>Genero</mat-grid-tile>
+        <mat-grid-tile>{{ person.sexo }}</mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="3" rowHeight="30px">
+        <mat-grid-tile>Direccion</mat-grid-tile>
+        <mat-grid-tile>{{ person.direccion }}</mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="3" rowHeight="30px">
+        <mat-grid-tile>Telefono</mat-grid-tile>
+        <mat-grid-tile>{{ person.telefono }}</mat-grid-tile>
+    </mat-grid-list>
+    <mat-divider></mat-divider>
+    <mat-grid-list cols="3" rowHeight="30px">
+        <mat-grid-tile>Empresa</mat-grid-tile>
+        <mat-grid-tile>{{ currentSolicitud.empresa[0].nombre }}</mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="3" rowHeight="30px">
+        <mat-grid-tile>R.U.C.</mat-grid-tile>
+        <mat-grid-tile>{{ currentSolicitud.empresa[0].ruc }}</mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="3" rowHeight="30px">
+        <mat-grid-tile>Direccion</mat-grid-tile>
+        <mat-grid-tile>{{ currentSolicitud.empresa[0].direccion }}</mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="3" rowHeight="30px">
+        <mat-grid-tile>Telefono</mat-grid-tile>
+        <mat-grid-tile>{{ currentSolicitud.empresa[0].telefono }}</mat-grid-tile>
+    </mat-grid-list>
+    <mat-divider></mat-divider>
+    <mat-grid-list cols="3" rowHeight="30px">
+        <mat-grid-tile>Solicitud estado</mat-grid-tile>
+        <mat-grid-tile>{{ currentSolicitud.estado_solicitud }}</mat-grid-tile>
+    </mat-grid-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cerrar</button>
+</div>
