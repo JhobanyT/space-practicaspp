@@ -1,1 +1,5 @@
-<p>informe works!</p>
+<input type="file" (change)="uploadImage($event)">
+
+<div class="images">
+  <img [src]="images" *ngFor="let image of images" width="200">
+</div>
