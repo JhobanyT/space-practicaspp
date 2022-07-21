@@ -10,15 +10,12 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SigninComponent } from './components/signin/signin.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './auth.guard';
-<<<<<<< HEAD
+
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { MatIconModule } from '@angular/material/icon';
-=======
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+
 import { environment } from '../environments/environment';
-import { provideStorage,getStorage } from '@angular/fire/storage';
 // import { TokenInterceptorService } from './services/token-interceptor.service';
->>>>>>> fea5c4bf944a6e567c7f23900df162c42ddd7832
 
 @NgModule({
   declarations: [
@@ -33,12 +30,9 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     MatSliderModule,
     FormsModule,
     HttpClientModule,
-<<<<<<< HEAD
+
     MatIconModule,
-=======
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideStorage(() => getStorage())
->>>>>>> fea5c4bf944a6e567c7f23900df162c42ddd7832
+
   ],
   providers: [
     AuthGuard,
