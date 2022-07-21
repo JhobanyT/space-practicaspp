@@ -28,6 +28,7 @@ import { ConvenioComponent } from './components/convenio/convenio.component';
 import { SolicitudAddComponent } from './components/solicitud-add/solicitud-add.component';
 import { SolicitudComponent } from './components/solicitud/solicitud.component';
 import { PracticaComponent } from './components/practica/practica.component';
+import { InformeComponent } from './components/informe/informe.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { PracticaComponent } from './components/practica/practica.component';
     SolicitudAddComponent,
     SolicitudComponent,
     PracticaComponent,
+    InformeComponent,
   ],
   imports: [
     CommonModule,

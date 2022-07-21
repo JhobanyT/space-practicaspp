@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Solicitud } from '@core/models/solicitud';
-// import { Solicitud } from 'src/app/models/solicitud';
+// import { Solicitud } from '@core/models/solicitud';
+import { Solicitud } from 'src/app/models/solicitud';
 import { SolicitudService } from '../../../../services/solicitud.service';
+import { Estado } from '../../../../core/models/estado';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-solicitud',
@@ -10,9 +12,16 @@ import { SolicitudService } from '../../../../services/solicitud.service';
 })
 export class SolicitudComponent implements OnInit {
 
-   listSolicitudes: Solicitud[] =[];
+    public estado_solicitud = "Rechazado";
 
-  constructor(private solicitudService:SolicitudService) { }
+    // public estado: boolean = true;
+    public estado_s: boolean = false;
+
+
+   listSolicitudes: any[] =[];
+
+  constructor(private solicitudService:SolicitudService, private router:Router) { }
+  filterSolicitud = '';
 
   ngOnInit(): void {
     this.onList();
@@ -24,6 +33,18 @@ export class SolicitudComponent implements OnInit {
       this.listSolicitudes=solicitudes;
      //  console.log(this.listSolicitudes[0]._id);
     })
+  }
+    eliminarsol(_id:any)
+    {
+    this.solicitudService.deleteSolicitudById(_id).subscribe(
+      res=>{
+        console.log('solicitud eliminada');
+        this.onList();
+      },
+      err=> console.log(err)
+      );
+    }
+  
    
    
 }
@@ -35,7 +56,7 @@ export class SolicitudComponent implements OnInit {
   //     console.log(error);
   //   })
   // }
-}
+//}
   // onList(){
   //     this.solicitudService.getSolicitud().subscribe((solicitudes:any)=>{
   //     console.log(solicitudes);

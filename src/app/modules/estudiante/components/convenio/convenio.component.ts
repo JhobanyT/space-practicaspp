@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConvenioService } from '../../../../services/convenio.service';
 
 @Component({
   selector: 'app-convenio',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConvenioComponent implements OnInit {
 
-  constructor() { }
+  listConvenios: any[] =[];
+
+  constructor(private convenioService:ConvenioService) { }
 
   ngOnInit(): void {
+    this.onList();
   }
+    onList(){
+      this.convenioService.getConvenio().subscribe((convenios:any)=>{
+       console.log(convenios);
+      this.listConvenios=convenios;
+    }) 
 
+}
 }

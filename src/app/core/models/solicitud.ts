@@ -7,7 +7,7 @@ export interface Solicitud {
     //estado:Array<string>;
     estado_solicitud:string[];
     //estado: Estado[]
-    status: boolean;
+    estado: boolean;
     // status: 'aceptado' | 'por-verificar' | 'rechazado';
     empresa:Empresa[];
     estudiante:Estudiante[];

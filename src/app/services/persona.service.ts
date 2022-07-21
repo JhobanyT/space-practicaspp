@@ -25,5 +25,7 @@ export class PersonaService {
   deletePersonaById(id: any, data: any): Observable<any> {
     return this.http.put(`${this.personaURL}/${id}`, data);
   }
+
+  
   
 }

@@ -17,12 +17,16 @@ import { MatTableModule } from '@angular/material/table';
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './pipes/filter.pipe';
+import { VerificarSolicitudComponent } from './components/verificar-solicitud/verificar-solicitud.component';
 
 
 @NgModule({
   declarations: [
     NavSecretariaComponent,
-    SolicitudComponent
+    SolicitudComponent,
+    FilterPipe,
+    VerificarSolicitudComponent
   ],
   imports: [
     CommonModule,
